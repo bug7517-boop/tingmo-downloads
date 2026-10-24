@@ -1,8 +1,12 @@
-# 影片轉文字機器人
+# 聽墨
+
+YouTube・Bilibili 影片轉文字、時間戳、繁體中文翻譯與摘要。
+
+> 公開下載名稱已更新為「聽墨」。v1.2.0 安裝包保持原版本，檔名仍為 VideoTextBot，程式內仍可能顯示「影片轉文字機器人」；功能與已確認可用的版本相同。
 
 ## 朋友安裝 Chrome 版：不需要 Python
 
-適用 Windows 64 位元與 Chrome。請到 [v1.2.0 預覽版下載頁](https://github.com/bug7517-boop/video-to-text-bot-downloads/releases/tag/v1.2.0-chrome-preview)，在 **Assets** 下載 **`VideoTextBot-Windows-v1.2.0-preview.zip`**。不要選 GitHub 自動產生的 Source code ZIP；單獨的 Chrome ZIP 也不包含轉錄服務。
+適用 Windows 64 位元與 Chrome。請到 [v1.2.0 預覽版下載頁](https://github.com/bug7517-boop/tingmo-downloads/releases/tag/v1.2.0-chrome-preview)，在 **Assets** 下載 **`VideoTextBot-Windows-v1.2.0-preview.zip`**。不要選 GitHub 自動產生的 Source code ZIP；單獨的 Chrome ZIP 也不包含轉錄服務。
 
 > 這是公開下載專案，任何人皆可下載；原始碼開發專案另行保留。此版本尚未上架 Chrome 商店。
 ### 第一次安裝與連線
@@ -34,5 +38,3 @@ Chrome 手動載入步驟參閱 [官方文件](https://developer.chrome.com/docs
 - Windows 執行檔為未數位簽章預覽版；其他系統尚未提供對應執行檔。下載包不要求安裝 Python、Git 或 GitHub CLI。
 
 完整說明見 [Chrome 使用指南](CHROME-README.md)、[隱私說明](PRIVACY.md) 與 [測試紀錄](QA_REPORT.md)。本專案只提供下載與使用說明，不包含原始碼開發歷史。
-
-
