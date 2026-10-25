@@ -9,6 +9,7 @@ YouTube・Bilibili 影片轉文字、時間戳逐字稿、繁體中文翻譯與�
 > **測試狀態：**七類詞庫與面板檢查已通過；本次打包後語音模型實測因本機可配置記憶體不足而失敗，尚未確認兩輪轉錄與英翻中完整流程。此版供測試，請保留舊版；詳見 [測試紀錄](QA_REPORT.md)。
 
 - [直接下載 Windows 完整包](https://github.com/bug7517-boop/tingmo-downloads/releases/download/v1.3.1-vocabulary-preview/Tingmo-Windows-v1.3.1-preview.zip)
+- [已有安裝：下載保留舊版的更新包](https://github.com/bug7517-boop/tingmo-downloads/releases/download/v1.3.1-vocabulary-preview/Tingmo-Update-v1.3.1-preview.zip)
 - [下載頁與版本說明](https://github.com/bug7517-boop/tingmo-downloads/releases/tag/v1.3.1-vocabulary-preview)
 - [舊版 1.2.0：需要時可還原](https://github.com/bug7517-boop/tingmo-downloads/releases/tag/v1.2.0-chrome-preview)
 
@@ -59,10 +60,15 @@ YouTube・Bilibili 影片轉文字、時間戳逐字稿、繁體中文翻譯與�
 
 ## 更新與排除問題
 
-1. 先匯出需要的結果，關閉舊服務。
-2. 新版解壓到新資料夾；不要覆蓋仍在執行的 EXE 或 DLL。
-3. 啟動新資料夾的服務。在 Chrome 擴充功能管理頁移除舊版後，載入新的 chrome-extension 資料夾，再重新整理影片，以新連接碼配對。
-4. 移除再載入可能清除設定與最近結果，需重新選擇。舊資料夾保留以便還原。
+2026-10-26 新增同一版本的完整更新包，原 1.2.0 與 1.3.1 完整包保留。
+
+1. 先匯出需要的結果，關閉舊本機服務。
+2. 下載上方更新包並完整解壓到原工具資料夾內的新子資料夾，執行 `Apply-Update.cmd`。若未自動找到，輸入原工具資料夾完整路徑。
+3. 更新器備份原 `chrome-extension` 與啟動器，將新版服務放進 `versions/chrome` 獨立資料夾；原根目錄的執行檔與 `models` 保留。
+4. 執行原位置的 **啟動擴充功能服務.cmd**。在 `chrome://extensions` 對原有項目按「重新載入」，重新整理影片，以新連接碼配對。沿用原項目及路徑，不要移除重裝。
+5. 如需還原，先關閉服務，執行更新器顯示的備份資料夾內 `Restore-Update.cmd`，再重新載入擴充功能及配對。新版服務資料夾仍會保留。
+
+原始碼開發專案只在現有來源已具七類詞庫時保存更新包與備份，避免覆蓋其他開發功能；重啟原服務及重新載入即可。更新包也包含完整服務，並非小型差異檔，執行檔未數位簽章。
 
 找不到工具時，確認擴充功能已啟用並重新整理影片。未連線時，確認本機服務正在執行並使用本次產生的連接碼。記憶體不足時可先選 base 並關閉其他大型程式後再試。
 
