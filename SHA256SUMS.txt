@@ -1,1 +1,2 @@
-365de84f1171b087a317dbba97e3140e08e240c27625e0e0918ffbe78e3ec12d  VideoTextBot-Windows-v1.2.0-preview.zip
+5052583547aa6d7efce851c511328d0fee657409ba462138051fc01297dde8e4  Tingmo-Chrome-v1.3.1-preview.zip
+41b582fa3655f02326f46939913b8d345c8927804eb5156949bc3ae025d65bd1  Tingmo-Windows-v1.3.1-preview.zip
